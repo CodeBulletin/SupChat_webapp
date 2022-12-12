@@ -1,6 +1,6 @@
-import ServerPanel from "./ServerPanel";
-import ChannelPanel from "./ChannelPanel";
-import MessagePanel from "./MessagePanel";
+import ServerPanel from "./components/ServerPanel";
+import ChannelPanel from "./components/ChannelPanel";
+import MessagePanel from "./components/MessagePanel";
 
 function App() {
     return (

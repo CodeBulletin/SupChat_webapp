@@ -1,4 +1,4 @@
-function PeopleDetails() {
+let PeopleDetails = () => {
     return (
         <div className="PeopleDetails">
             

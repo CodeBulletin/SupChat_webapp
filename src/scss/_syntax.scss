@@ -1,0 +1,66 @@
+pre {
+    background-color: #202225;
+    padding: 10px;
+    width: fit-content;
+}
+
+.hljs-number {
+    color: #00ffff;
+}
+
+.hljs-keyword {
+    color: #ffaaff;
+}
+
+.hljs-string {
+    color: #ff9999;
+}
+
+.hljs-title {
+    color: #ffff00;
+}
+
+.hljs-comment {
+    color: #88ff88;
+}
+
+.hljs-built_in {
+    color: #aaaaff;
+}
+
+.hljs-type {
+    color: orange;
+}
+
+.hint.tip {
+    position: relative;
+    width: fit-content;
+    padding: 1px;
+    &:after {
+        content: 'Spoiler';
+        position: absolute;
+        left: 0%;
+        min-width: fit-content;
+        width: 100%;
+        height: 100%;
+        background-color: #202225;
+    }
+    &:hover {
+        &::after {
+            background-color: #2a2b2c;
+        }
+    }
+    &:active {
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.hint.error {
+    color: red;
+}
+
+.hint.warn {
+    color: green;
+}

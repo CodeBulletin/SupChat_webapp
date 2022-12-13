@@ -1,4 +1,4 @@
-function ChannelPanel() {
+let ChannelPanel = () => {
     return (
         <div className="ChannelPanel">
             

@@ -1,10 +1,10 @@
 import TextBox from "../TextBox";
 
-function ChatInput() {
+let ChatInput = (props) => {
     return (
         <div className="ChatInput">
             <div className="padded_chatdiv">
-                <TextBox max={5} min={1} className={"input_textbox"} placeholder={'Message'}/>
+                <TextBox maxHeight={400} min={1} defaultHeight={'25px'} className={"input_textbox"} placeholder={'Message'}/>
             </div>
         </div>
     );

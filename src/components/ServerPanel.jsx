@@ -1,4 +1,4 @@
-function ServerPanel() {
+let ServerPanel = () => {
     return (
         <div className="ServerPanel">
             

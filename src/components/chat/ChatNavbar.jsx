@@ -1,4 +1,4 @@
-function ChatNavbar() {
+let ChatNavbar = () => {
     return (
         <div className="ChatNavbar">
             

@@ -1,25 +1,39 @@
-import React from 'react';
+import { useContext } from "react";
+import { ChatContext } from "../contexts/chat_contex";
 
-class TextBox extends React.Component { 
-    constructor(props) {
-        super(props);
+let TextBox = (props) => { 
 
-        this.autoSize = this.autoSize.bind(this);
-    }
+    const {items, setItems} = useContext(ChatContext);
 
-    autoSize(event) {
+    let reSize = (event) => {
         const box = event.target;
-        const fontSize = parseFloat(window.getComputedStyle(box).fontSize);
-        box.style.height = 'auto';
-        var newHeight = (box.scrollHeight < (this.props.max + 1) * fontSize ? box.scrollHeight : (1 + this.props.max) * fontSize);
-        box.style.height = newHeight.toString() + 'px';
+        const padding = window.getComputedStyle(box).padding;
+        const padx = parseFloat(padding.substring(0, padding.length - 2));
+        box.style.height = window.getComputedStyle(box).lineHeight;
+        const scrollHeight = box.scrollHeight;
+        box.style.height = (scrollHeight - 2 * padx) + 'px';
     };
-    
-    render() {
-        return (
-            <textarea placeholder={this.props.placeholder} onChange={this.autoSize} rows={this.props.min} className={this.props.className}></textarea>
-        )
+
+    let handleEvent = (event) => {
+        if(event.keyCode === 13 && !event.shiftKey) {
+            event.preventDefault();
+            let output = event.target.value.trim();
+            output = output.replace(/\n/g, '\\\n')
+            setItems([...items, output]); 
+            event.target.value = "";
+            reSize(event);
+        }
     }
+
+    let handle_event = handleEvent.bind(this);
+    let re_size = reSize.bind(this);
+    
+    return (
+        <textarea placeholder={props.placeholder} 
+            onChange={re_size} onKeyDown={handle_event}
+            rows={props.min} className={props.className}>
+        </textarea>
+    );
 }
 
 export default TextBox;

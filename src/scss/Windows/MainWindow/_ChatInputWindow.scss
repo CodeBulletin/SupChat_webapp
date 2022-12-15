@@ -1,0 +1,23 @@
+.ChatInputWindow {
+    border-top: 2px solid rgba($color: #ffffff, $alpha: 0.05);
+    .padded_chatdiv {        
+        display: flex;
+        flex-direction: row;
+        margin: 1rem;
+        flex-grow: 1;
+        .input_textbox {
+            resize: none;
+            outline: none;
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.2rem;
+            height: calc(1 * 1.2rem);
+            max-height: calc(20 * 1.2rem);
+            background-color: var(--bg3);
+            border: none;
+            color: white;
+            position: relative;
+        }
+    }
+}

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Maitree:wght@200;300;400;500;600;700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import "./color";
-@import "./syntax";
+@import "./theme_importer";
 body {
     width: 100vw;
     height: 100vh;
@@ -19,9 +18,6 @@ body {
 #root {
     width: 100%;
     height: 100%;
-    --bg1: #{$layer0-dark-bg};
-    --bg2: #{$layer1-dark-bg};
-    --bg3: #{$layer2-dark-bg};
 }
 
 .App {
@@ -31,23 +27,11 @@ body {
     flex-direction: row;
 }
 
-.ServerPanel {
+.MainNavbar {
     width: 70px;
     height: 100%;
     background-color: var(--bg1);
 }
 
-.ChannelPanel {
-    width: 240px;
-    height: 100%;
-    background-color: var(--bg2);
-}
 
-.MessagePanel {
-    background-color: var(--bg3);
-    flex-grow: 1;
-    height: 100%;
-}
-
-
-@import "./component_importer";
+@import "./importer";

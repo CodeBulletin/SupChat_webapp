@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { ChatContext } from "../contexts/chat_contex";
+import { Contexts } from "../Contexts/Contexts";
 
-let TextBox = (props) => { 
+let ChatInput = (props) => { 
 
-    const {items, setItems} = useContext(ChatContext);
+    const {items, setItems} = useContext(Contexts);
 
     let reSize = (event) => {
         const box = event.target;
@@ -18,7 +18,6 @@ let TextBox = (props) => {
         if(event.keyCode === 13 && !event.shiftKey) {
             event.preventDefault();
             let output = event.target.value.trim();
-            output = output.replace(/\n/g, '\\\n')
             setItems([...items, output]); 
             event.target.value = "";
             reSize(event);
@@ -36,4 +35,4 @@ let TextBox = (props) => {
     );
 }
 
-export default TextBox;
+export default ChatInput;

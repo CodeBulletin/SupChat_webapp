@@ -1,0 +1,13 @@
+.MessageWindow{
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    .inner_window {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow-y: auto;
+        overflow-wrap: break-word;
+        color: white;
+    }
+}

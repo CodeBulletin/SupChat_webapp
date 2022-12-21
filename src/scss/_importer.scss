@@ -1,4 +1,5 @@
 @import "./components/MarkdownRenderer";
+@import "./components/Channel";
 
 @import "./Windows/MainWindow/ChatTipWindow";
 @import "./Windows/MainWindow/ChatInputWindow";
@@ -8,3 +9,4 @@
 @import "./Windows/SideWindow";
 @import "./Windows/MainWindow";
 @import "./Windows/InfoWindow";
+@import "./Windows/ChannelList";

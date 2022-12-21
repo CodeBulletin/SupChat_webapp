@@ -2,4 +2,23 @@
     --bg1: #{$layer0-dark-bg};
     --bg2: #{$layer1-dark-bg};
     --bg3: #{$layer2-dark-bg};
+    --normal-text-color: #{$normal-text-color-dark};
+
+    --code-bg: #{$code-dark-bg};
+    --code-numeric: #{$code-dark-numeric};
+    --code-string: #{$code-dark-string};
+    --code-builtin: #{$code-dark-builtin};
+    --code-keyword: #{$code-dark-keyword};
+    --code-type: #{$code-dark-type};
+    --code-title: #{$code-dark-title};
+    --code-comment: #{$code-dark-comment};
+
+    --chat-h1: #{$chat-h1-dark};
+    --chat-h2: #{$chat-h2-dark};
+    --chat-h3: #{$chat-h3-dark};
+
+    --chat-a: #{$chat-a-dark};
+    --chat-a-visited: #{$chat-a-visited-dark};
+    --chat-a-hover: #{$chat-a-hover-dark};
+    --chat-a-active: #{$chat-a-active-dark};
 }

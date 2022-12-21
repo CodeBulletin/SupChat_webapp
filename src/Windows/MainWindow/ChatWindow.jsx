@@ -2,11 +2,16 @@ import ChatTipWindow from "./ChatWindow/ChatTipWindow";
 import MessageWindow from "./ChatWindow/MessageWindow";
 import ChatInputWindow from "./ChatWindow/ChatInputWindow";
 import InfoWindow from "../InfoWindow";
-import { useState } from "react";
-import { Contexts } from "../../Contexts/Contexts";
+import { useState, useEffect } from "react";
+import { Contexts, ChannelContext } from "../../Contexts/Contexts";
+import "../../Globals"
 
 let ChatWindow = (props) => {
     const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        global.socket.on("rm", (data) => setItems([...items, data["message"]]));
+    })
     return (
         <div className="ChatWindow">
             <ChatTipWindow />

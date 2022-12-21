@@ -1,5 +1,7 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Contexts } from "../Contexts/Contexts";
+
+import "../Globals"
 
 let ChatInput = (props) => { 
 
@@ -21,6 +23,9 @@ let ChatInput = (props) => {
             setItems([...items, output]); 
             event.target.value = "";
             reSize(event);
+            global.socket.emit("test", {
+                message: output
+            });
         }
     }
 
